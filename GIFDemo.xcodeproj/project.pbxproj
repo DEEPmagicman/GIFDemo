@@ -13,6 +13,10 @@
 		29D44701297849A800E9D3CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D446FF297849A800E9D3CB /* Main.storyboard */; };
 		29D44703297849AA00E9D3CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D44702297849AA00E9D3CB /* Assets.xcassets */; };
 		29D44706297849AA00E9D3CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D44704297849AA00E9D3CB /* LaunchScreen.storyboard */; };
+		29D4470E29784DB200E9D3CB /* SelectGifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D4470D29784DB200E9D3CB /* SelectGifVC.swift */; };
+		29D447102978531C00E9D3CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D4470F2978531C00E9D3CB /* Extension.swift */; };
+		29D447132978536D00E9D3CB /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D447122978536D00E9D3CB /* GifCollectionViewCell.swift */; };
+		29D447152978537400E9D3CB /* GifCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29D447142978537400E9D3CB /* GifCollectionViewCell.xib */; };
 		BC1757DBD0A7572047072014 /* Pods_GIFDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00CDEF857B5D4E0B35DB819 /* Pods_GIFDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		29D44702297849AA00E9D3CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29D44705297849AA00E9D3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29D44707297849AA00E9D3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29D4470D29784DB200E9D3CB /* SelectGifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGifVC.swift; sourceTree = "<group>"; };
+		29D4470F2978531C00E9D3CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		29D447122978536D00E9D3CB /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		29D447142978537400E9D3CB /* GifCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GifCollectionViewCell.xib; sourceTree = "<group>"; };
 		658F33478041377E2CA487F8 /* Pods-GIFDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFDemo.release.xcconfig"; path = "Target Support Files/Pods-GIFDemo/Pods-GIFDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B00CDEF857B5D4E0B35DB819 /* Pods_GIFDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GIFDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +71,7 @@
 		29D446F8297849A800E9D3CB /* GIFDemo */ = {
 			isa = PBXGroup;
 			children = (
+				29D447112978535F00E9D3CB /* GIFCell */,
 				29D446F9297849A800E9D3CB /* AppDelegate.swift */,
 				29D446FB297849A800E9D3CB /* SceneDelegate.swift */,
 				29D446FD297849A800E9D3CB /* ViewController.swift */,
@@ -70,8 +79,19 @@
 				29D44702297849AA00E9D3CB /* Assets.xcassets */,
 				29D44704297849AA00E9D3CB /* LaunchScreen.storyboard */,
 				29D44707297849AA00E9D3CB /* Info.plist */,
+				29D4470D29784DB200E9D3CB /* SelectGifVC.swift */,
+				29D4470F2978531C00E9D3CB /* Extension.swift */,
 			);
 			path = GIFDemo;
+			sourceTree = "<group>";
+		};
+		29D447112978535F00E9D3CB /* GIFCell */ = {
+			isa = PBXGroup;
+			children = (
+				29D447122978536D00E9D3CB /* GifCollectionViewCell.swift */,
+				29D447142978537400E9D3CB /* GifCollectionViewCell.xib */,
+			);
+			path = GIFCell;
 			sourceTree = "<group>";
 		};
 		2E5B6AE4BA2F48310F26A76E /* Pods */ = {
@@ -80,7 +100,6 @@
 				05E420684CC433334A94CE1E /* Pods-GIFDemo.debug.xcconfig */,
 				658F33478041377E2CA487F8 /* Pods-GIFDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,6 +174,7 @@
 				29D44706297849AA00E9D3CB /* LaunchScreen.storyboard in Resources */,
 				29D44703297849AA00E9D3CB /* Assets.xcassets in Resources */,
 				29D44701297849A800E9D3CB /* Main.storyboard in Resources */,
+				29D447152978537400E9D3CB /* GifCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D447102978531C00E9D3CB /* Extension.swift in Sources */,
 				29D446FE297849A800E9D3CB /* ViewController.swift in Sources */,
 				29D446FA297849A800E9D3CB /* AppDelegate.swift in Sources */,
+				29D447132978536D00E9D3CB /* GifCollectionViewCell.swift in Sources */,
 				29D446FC297849A800E9D3CB /* SceneDelegate.swift in Sources */,
+				29D4470E29784DB200E9D3CB /* SelectGifVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

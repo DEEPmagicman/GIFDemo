@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  GIFDemo
 //
-//  Created by Square Infosoft on 18/01/23.
+//  Created by MAC on 18/01/23.
 //
 
 import UIKit

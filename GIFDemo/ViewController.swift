@@ -2,18 +2,18 @@
 //  ViewController.swift
 //  GIFDemo
 //
-//  Created by Square Infosoft on 18/01/23.
+//  Created by MAC on 18/01/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func onClickSDWebDemo(_ sender: Any) {
+        navigationController?.pushViewController(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectGifVC"), animated: true)
+    }
 }
-
